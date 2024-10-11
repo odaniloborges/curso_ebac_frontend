@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
+    <title>Exercicio - HTML com JS</title>
     <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
     <div class="container">
-        <h1>EBAC Banking</h1>
-        <h2>Depósitos</h2>
-        <form id="form-deposito">
-            <input type="text" required id="nome-beneficiario" placeholder="Nome completo do beneficiário" />
-            <p class="error-message">O nome precisa ser completo!</p>
-            <input type="number" id="numero-conta" required placeholder="Número da conta" />
-            <input type="number" id="valor-deposito" required placeholder="Valor" />
-            <textarea placeholder="Descrição (opcional)"></textarea>
-            <button type="submit" id="btn-depositar">Depositar</button>
+        <h1>EBAC Exercicio HTML com JS</h1>
+        <form id="form-numeros">
+            <input type="number" required id="numero-a" placeholder="Primeiro Numero" />
+            <input type="number" required id="numero-b" placeholder="Segundo Numero" />
+            <p class="error-message">O segundo número precisa ser maior que o primeiro!</p>
+            <button type="submit" id="btn-enviar">Enviar</button>
         </form>
         <p class="success-message"></p>
     </div>
