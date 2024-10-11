@@ -1,43 +1,30 @@
-const form = document.getElementById('form-deposito');
-const nomeBeneficiario = document.getElementById('nome-beneficiario');
-let formEValido = false;
+const form = document.getElementById('form-numeros');
+const numeroA = document.getElementById('numero-a');
+const numeroB = document.getElementById('numero-b');
 
-function validaNome(nomeCompleto) {
-  const nomeArray = nomeCompleto.split(' ');
-  return nomeArray.length >= 2;
-}
+formEValido = false;
+
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-
-  const numeroConta = document.getElementById('numero-conta');
-  const valorDeposito = document.getElementById('valor-deposito');
-  const mensagemSucesso = `Montante de <b>${valorDeposito.value}</b> reais, depositado com sucesso para o cliente: <b>${nomeBeneficiario.value}</b> - conta: ${numeroConta.value}!`;
   
-  formEValido = validaNome(nomeBeneficiario.value);
+  const mensagemSucesso = `O envio foi feito com sucesso! o Números digitados foram: primeiro campo (${numeroA.value}) e segundo campo (${numeroB.value})`;
+  const containerMensagemSucesso = document.querySelector('.success-message');
+  containerMensagemSucesso.innerHTML = mensagemSucesso;
+
+  formEValido = numeroA.value < numeroB.value ? true : false;
+  
   if (formEValido) {
     const containerMensagemSucesso = document.querySelector('.success-message');
     containerMensagemSucesso.innerHTML = mensagemSucesso;
     containerMensagemSucesso.style.display = 'block';
 
-    nomeBeneficiario.value = '';
-    numeroConta.value = '';
-    valorDeposito.value = '';
+    numeroA.value = '';
+    numeroB.value = '';  
+    
   } else {
-    nomeBeneficiario.style.border = '1px solid red';
+    numeroB.classList.add('error');
     document.querySelector('.error-message').style.display = 'block';
   }
+
 })
-
-nomeBeneficiario.addEventListener('keyup', function(e) {
-  console.log(e.target.value);
-  formEValido = validaNome(e.target.value);
-
-  if (!formEValido) {
-    nomeBeneficiario.classList.add('error');
-    document.querySelector('.error-message').style.display = 'block';
-  } else {
-    nomeBeneficiario.classList.remove('error');
-    document.querySelector('.error-message').style.display = 'none';
-  }
-});
