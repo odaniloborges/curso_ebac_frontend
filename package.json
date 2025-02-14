@@ -19,7 +19,11 @@
   "homepage": "https://github.com/odaniloborges/curso_ebac_frontend#readme",
   "devDependencies": {
     "gulp": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-obfuscate": "^0.2.9",
     "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "sass": "^1.84.0"
   }
 }
