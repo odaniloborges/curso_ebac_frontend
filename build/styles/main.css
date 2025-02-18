@@ -91,7 +91,7 @@ details .details-content-wrapper {
   width: 330px;
 }
 details:hover, details:has(summary:focus-visible) {
-  outline: 3px solid var(--cassiopeia-color-primary);
+  outline: 3px solid #912b3b;
   outline-offset: 3px;
 }
 details span::before {

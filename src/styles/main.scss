@@ -95,7 +95,7 @@ details {
     }
 
     &:hover, &:has(summary:focus-visible) {
-        outline: 3px solid var(--cassiopeia-color-primary);
+        outline: 3px solid #912b3b;
         outline-offset: 3px;
     }
     span::before {
@@ -121,7 +121,7 @@ details {
         transition: opacity 0.5s ease;
         transition-delay: 0.5s;
         text-align: start;
-        color: #;
+        color: #fff;
     }
 
     [open] & p,
