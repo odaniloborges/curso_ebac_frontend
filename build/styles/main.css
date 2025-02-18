@@ -116,6 +116,7 @@ details span::before {
   transition: opacity 0.5s ease;
   transition-delay: 0.5s;
   text-align: start;
+  color: #fff;
 }
 [open] .details-content-wrapper p, [open] .details-content-wrapper a {
   transform: none;
