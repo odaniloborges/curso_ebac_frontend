@@ -11,6 +11,9 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-column-gap: 1%;
+}
+
+.produto {
 
     &__imagem {
         width: 100%;
